@@ -1,0 +1,60 @@
+class Paciente
+{
+    nombre;
+  apellidos;
+  correoElec;
+  rfc;
+  sexo;
+  genero;
+  historialClinico;
+  * -- * SubPaciente;
+}
+
+class SubPaciente
+{
+    isA SisPrin;
+baseDeDatos;
+  opcionDeCita;
+}
+
+class HistorialClinico
+{
+  antecedentesClinicos;
+  tratamiento;
+  imagenes;
+  * -- * SubHistorial;
+}
+
+class SubHistorial
+{
+    isA SisPrin;
+baseDeDatos;
+  opcionImagenes;
+}
+
+class PagoEfectivo
+{
+  total;
+  * -- * SubPago;
+}
+
+class SubPago
+{
+    isA SisPrin;
+baseDeDatos;
+  opPago;
+}
+
+class Aseguradora
+{
+  tipoAseguradora;
+  * -- * SubHistorial;
+}
+
+class SisPrin
+{
+  iniciarSistema;
+  solicitudRegistro;
+  solicitudGCitas;
+  soliPago;
+}
